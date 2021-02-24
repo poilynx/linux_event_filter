@@ -45,6 +45,7 @@ int main()
 
 	audit_rule_syscallbyname_data(rule, "mkdir");
 	audit_rule_syscallbyname_data(rule, "geteuid");
+	//audit_rule_syscallbyname_data(rule, "open");
 	if (audit_add_rule_data(fd, rule, AUDIT_FILTER_EXIT, AUDIT_ALWAYS) < 0) {
 		perror("audit_add_rule_data");
 		exit(-1);
